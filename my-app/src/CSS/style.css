@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 55px;
+  background-color:#0067A3 ;
+  color: white;
+  font-size: 18px;
+  padding: 0 20px 0 20px;
+}
+
+.header__title {
+  font-size: 28px;
+  line-height: 33px;
+}
+
+.header__user-block {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header__user-block__avatar {
+  display: flex;
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-image: url('../IMG/user-avatar.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header__user-block__select {
+  margin-left: 7px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 8px;
+  transition: 0.5s;
+}
+
+.visible {
+  background-image: url('../IMG/select-visible.png');
+}
+
+.hidden {
+  background-image: url('../IMG/select-hidden.png');
+}
+
+.select__block {
+  margin-top: 7px;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  background-color: #0079BF;
+  padding: 0 10px 0 0;
+}
+
+.header-select {
+  border: none;
+  border-radius: 5px;
+  width: 134px;
+  padding: 7px;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.triangle {
+  position: absolute;
+  top: -21px;
+  right:  48px;
+  border: 10px solid transparent; border-bottom: 11px solid white;
+}
+
+.option {
+  padding: 0 0 0 5px;
+  border-radius: 5px;
+}
+
+/* BODY */
+
+.canban {
+  height: 100vh;  
+  background-color: #0079BF;
+  font-family: 'Roboto', sans-serif;
+}
+
+.application {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between ;
+  height: 100%;
+}
+
+.main {
+  height: 100%;
+  min-height: 360px;
+  padding: 20px;
+}
+
+/* CANBAN MAIN FIELD WITH CARDS */
+
+.canbanbody {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 21px;
+  color: black;
+}
+
+/* CARDS */
+
+.canbanbody-card {
+  display: block;
+  width: 280px;
+  background-color: #EBECF0;
+  border-radius: 10px;
+  padding: 10px 0 5px 10px;
+  height: fit-content;
+  margin-bottom: 20px;
+}
+
+.canbanbody-card__links {  
+  background-color: white;
+  padding: 5px;
+  list-style-type: none;
+  border-radius: 5px;
+  text-decoration: none;
+  word-break: break-word;
+  font-size: 18px;
+  line-height: 21px;
+  color: black;
+  width: 100%;  
+}
+
+.canbanbody-card__tasklist {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.canbanbody-card__input {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  line-height: 21px;
+  color: black;
+  width: 100%;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 15px;
+  padding: 5px 5px 2px 5px;
+}
+
+/* SELECT & SCROLL PROPERTIES IN CARDS BLOCK */
+
+.canbanbody-card__select {
+  border-radius: 5px;
+  width: 100%;
+  height: 31px;
+  margin-top: 15px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  line-height: 21px;
+  color: black;
+}
+
+.scroll {
+  overflow-y: auto;
+  max-height: 300px;
+  padding-right: 12px;
+  outline:none;
+  width: 100%;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  width: 12px;
+  background-color: #CBCBCB;    
+  border-radius: 5px;       
+  border: none;  
+}
+
+.scroll::-webkit-scrollbar {
+  width: 12px;
+  background-color: white;    
+  border-radius: 5px;      
+  border: none;  
+}
+
+
+/*  BUTTONS  */
+
+.canbanbody-card__button, .canbanbody-card__button__submit {
+  padding: 5px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #5E6C84;
+  background-color: #EBECF0;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.canbanbody-card__button:hover {
+  background-color: white;
+}
+
+.canbanbody-card__button__submit:hover {
+  color: white;
+  background-color: #0079BF;
+}
+
+.canbanbody-card__button:disabled, .canbanbody-card__button:disabled:hover {
+  color: rgb(189, 187, 187);
+  background-color: #EBECF0;
+  cursor: default;
+}
+
+/* DESCRIPTION BLOCK */
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.description-container__title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.description-container__input {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  line-height: 21px;
+  color: black;
+  width: 100%;
+  padding: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.description-container__save-button {
+  background-color: rgb(183, 180, 180);
+  border: none;
+  border-radius: 5px;
+  max-width: 150px;
+  padding: 3px;
+  font-size: 18px;
+  line-height: 21px;
+  color: black;
+  cursor: pointer;
+}
+
+.description-container__save-button:disabled {
+  background-color: #c3c3c4;
+  color: #5E6C84;
+  cursor: default;
+}
+
+.description-container__back-to-main {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 20px;
+}
+
+/* FOOTER */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 55px;
+  background-color:#0067A3 ;
+  color: white;
+  font-size: 18px;
+  padding: 0 20px 0 20px;
+  height: 100%;
+}
+
+.footer-container__tasks {
+  display: flex;
+}
+
+.footer-container__paragraph {
+  margin-left: 36px;
+}
+
+/* OTHERS */
+
+.block {
+  display: block;
+}
+
+
+
+
+
+

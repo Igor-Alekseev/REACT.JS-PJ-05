@@ -1,0 +1,57 @@
+@media screen and (max-width: 1200px) {
+    
+/* HEADER */
+
+.header-container {
+    justify-content: end;
+    background-color: #0079BF;
+}
+
+.header__title {
+    display: none;
+}
+
+/* BODY */
+
+.canban {
+    height: 100%;  
+}
+
+/* DESCRIPTION BLOCK */
+
+.description-container {
+    min-height: 400px;
+}
+
+/* CANBAN MAIN FIELD WITH CARDS */
+
+.canbanbody {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CARDS */
+
+.canbanbody-card {
+    width: 100%;
+}
+
+/* FOOTER */
+
+.footer-container {
+    display: none;
+}
+
+.footer-container__tasks {
+    display: none;
+}
+
+.footer-container__paragraph {
+    display: none;
+}
+
+.footer-container__copyright {
+    display: none;
+}
+    
+}
